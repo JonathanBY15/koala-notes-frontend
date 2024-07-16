@@ -28,8 +28,8 @@ const TestingApi = () => {
         <div key={note.id} className="note-item">
           <h3>{note.title}</h3>
           <p>{note.content}</p>
-          <p>Created at: {new Date(note.created_at).toLocaleString()}</p>
-          <p>Updated at: {new Date(note.updated_at).toLocaleString()}</p>
+          <p><b>Created at:</b> {new Date(note.created_at).toLocaleString()}</p>
+          <p><b>Last Updated at:</b> {new Date(note.updated_at).toLocaleString()}</p>
         </div>
       ))}
     </div>
