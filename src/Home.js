@@ -1,13 +1,13 @@
 // Home.js
 
 import React from 'react';
-import NoteList from './NoteList'; // Assuming NoteItem is in the same directory
+import TestingApi from './TestingApi';
 
 const Home = () => {
     return (
         <div className="home">
             <h1>Home Page</h1>
-            <NoteList />
+            <TestingApi />
         </div>
     );
 }

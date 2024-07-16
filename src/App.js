@@ -10,7 +10,7 @@ import NoteForm from './NoteForm';
 import Footer from './Footer';
 import Home from './Home'
 
-import TestingApi from './TestingApi';
+import TestingApi from './TestingApi'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -30,7 +30,6 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path="/new" element={<NoteForm onSubmit={handleNoteSubmit} />}/>
-            <Route path='/test' element={<TestingApi/>}/>
           </Routes>
         </main>
         <Footer />

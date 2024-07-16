@@ -23,18 +23,15 @@ const TestingApi = () => {
   }, []); // Empty dependency array means this effect runs once after the initial render
 
   return (
-    <div>
-      <h2>Notes:</h2>
-      <ul>
-        {notes.map((note) => (
-          <li key={note.id}>
-            <h3>{note.title}</h3>
-            <p>{note.content}</p>
-            <p>Created at: {new Date(note.created_at).toLocaleString()}</p>
-            <p>Updated at: {new Date(note.updated_at).toLocaleString()}</p>
-          </li>
-        ))}
-      </ul>
+    <div className="note-list">
+      {notes.map((note) => (
+        <div key={note.id} className="note-item">
+          <h3>{note.title}</h3>
+          <p>{note.content}</p>
+          <p>Created at: {new Date(note.created_at).toLocaleString()}</p>
+          <p>Updated at: {new Date(note.updated_at).toLocaleString()}</p>
+        </div>
+      ))}
     </div>
   );
 };

@@ -60,6 +60,7 @@ main {
 
 .note-list {
   margin-top: 20px;
+  list-style-type: none;
 }
 
 .note-item {
