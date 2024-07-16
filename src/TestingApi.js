@@ -28,6 +28,10 @@ const TestingApi = () => {
     navigate(`/note/${noteId}`);
   };
 
+  if (notes.length === 0) {
+    return <h1>No notes found.</h1>;
+  }
+
   return (
     <div className="note-list">
       {notes.map((note) => (

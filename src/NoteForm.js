@@ -1,5 +1,7 @@
 // NoteForm.js
 
+import './NoteForm.css'
+
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 

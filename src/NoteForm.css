@@ -1,4 +1,4 @@
-.note-form {
+/* .note-form {
     background-color: #f0f0f0;
     padding: 20px;
     border: 1px solid #ccc;
@@ -30,4 +30,51 @@
 
 .note-form button:hover {
     background-color: #555;
-}
+} */
+
+
+
+/* NoteForm.css */
+
+.note-form {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .note-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .note-form input,
+  .note-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  .note-form textarea {
+    resize: vertical;
+  }
+  
+  .note-form button {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .note-form button:hover {
+    background-color: #555;
+  }
+  

@@ -1,17 +1,14 @@
 // App.js
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css';
-import './Navbar.css'
-import './NoteForm.css'
-import './Footer.css'
 
 import Navbar from './Navbar';
 import NoteForm from './NoteForm';
 import Footer from './Footer';
 import Home from './Home'
 import Note from './Note'
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NoteEdit from './NoteEdit';
 
 function App() {
 
@@ -25,10 +22,13 @@ function App() {
           <Routes>
             <Route path='/' element={<Home/>} />
             <Route path='/note/:noteId' element={<Note/>} />
+            <Route path='/note/:noteId/edit' element={<NoteEdit/>} />
             <Route path="/new" element={<NoteForm/>}/>
           </Routes>
         </main>
-        <Footer />
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </Router>
     

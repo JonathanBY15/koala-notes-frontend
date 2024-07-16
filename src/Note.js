@@ -81,7 +81,7 @@ const Note = () => {
         fetchNote();
     }, [noteId]);
 
-    const handleDelete = async () => {
+    const handleDeleteClick = async () => {
         try {
             const response = await fetch(`http://localhost:8000/api/notes/${noteId}`, {
                 method: 'DELETE'
@@ -95,6 +95,10 @@ const Note = () => {
             console.error('Error deleting note:', error);
         }
     };
+
+    const handleEditClick = () => {
+        navigate(`/note/${noteId}/edit`);
+      };
 
     if (loading) {
         return <p>Loading...</p>;
@@ -110,7 +114,8 @@ const Note = () => {
             <p>{note.content}</p>
             <p>Created at: {new Date(note.created_at).toLocaleString()}</p>
             <p>Updated at: {new Date(note.updated_at).toLocaleString()}</p>
-            <button id="delete-btn" onClick={handleDelete}>Delete</button>
+            <button id="delete-btn" onClick={handleDeleteClick}>Delete</button>
+            <button id="edit-btn" onClick={handleEditClick}>Edit</button>
         </div>
     );
 };

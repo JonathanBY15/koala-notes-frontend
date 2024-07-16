@@ -1,5 +1,7 @@
 // Navbar.js
 
+import './Navbar.css'
+
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import logo from './images/logo-white.png';
