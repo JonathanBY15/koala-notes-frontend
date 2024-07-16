@@ -10,8 +10,6 @@ import NoteForm from './NoteForm';
 import Footer from './Footer';
 import Home from './Home'
 
-import TestingApi from './TestingApi'
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
