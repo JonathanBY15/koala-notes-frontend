@@ -1,9 +1,11 @@
 // TestingApi.js
 
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const TestingApi = () => {
   const [notes, setNotes] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchNotes = async () => {
@@ -22,10 +24,14 @@ const TestingApi = () => {
     fetchNotes();
   }, []); // Empty dependency array means this effect runs once after the initial render
 
+  const handleNoteClick = (noteId) => {
+    navigate(`/note/${noteId}`);
+  };
+
   return (
     <div className="note-list">
       {notes.map((note) => (
-        <div key={note.id} className="note-item">
+        <div key={note.id} className="note-item" onClick={() => handleNoteClick(note.id)}>
           <h3>{note.title}</h3>
           <p>{note.content}</p>
           <p><b>Created at:</b> {new Date(note.created_at).toLocaleString()}</p>
