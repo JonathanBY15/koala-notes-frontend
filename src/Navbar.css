@@ -19,7 +19,14 @@
 
 .logo {
     margin-right: auto; /* Pushes 'Home' to the left */
-    font-size: 24px;
+}
+
+#koala-notes-logo {
+    max-width: 200px;
+}
+
+#koala-notes-logo:hover {
+    cursor: pointer;
 }
 
 .nav-link {

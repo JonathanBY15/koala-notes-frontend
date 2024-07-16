@@ -6,7 +6,6 @@ import TestingApi from './TestingApi';
 const Home = () => {
     return (
         <div className="home">
-            <h1>Home Page</h1>
             <TestingApi />
         </div>
     );

@@ -1,13 +1,21 @@
 // Navbar.js
 
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import logo from './images/logo-white.png';
 
 const Navbar = () => {
+    const navigate = useNavigate();
+
+    const handleLogoClick = () => {
+        navigate('/');
+    };
+
     return (
         <nav className="navbar">
             <ul className="navbar-nav">
-                <li className='logo'>
-                    <a href="/" className="nav-link">Koala Notes</a>
+                <li className='logo' onClick={handleLogoClick}>
+                    <img src={logo} alt="Koala Notes" id='koala-notes-logo'/>
                 </li>
                 <li className="nav-item">
                     <a href="/" className="nav-link">Home</a>
