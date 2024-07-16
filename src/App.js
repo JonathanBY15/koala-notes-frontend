@@ -1,3 +1,5 @@
+// App.js
+
 import './App.css';
 import './Navbar.css'
 import './NoteForm.css'
@@ -7,6 +9,9 @@ import Navbar from './Navbar';
 import NoteList from './NoteList';
 import NoteForm from './NoteForm';
 import Footer from './Footer';
+import Home from './Home'
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   const handleNoteSubmit = (note) => {
@@ -15,17 +20,21 @@ function App() {
   }
 
   return (
-    <div className="app-container">
-      <header>
-        <Navbar />
-      </header>
-      <main>
-        <NoteForm onSubmit={handleNoteSubmit} />
-        <h1>Home Page</h1>
-        <NoteList />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <div className="app-container">
+        <header>
+          <Navbar />
+        </header>
+        <main>
+          <Routes>
+            <Route path='/' element={<Home/>} />
+            <Route path="/new" element={<NoteForm onSubmit={handleNoteSubmit} />}/>
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
+    
   );
 }
 
