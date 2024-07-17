@@ -25,9 +25,6 @@ const Navbar = () => {
                 <li className="nav-item">
                     <a href="/new" className="nav-link">New Note</a>
                 </li>
-                <li className="nav-item">
-                    <a href="/logout" className="nav-link">Log Out</a>
-                </li>
             </ul>
         </nav>
     );
