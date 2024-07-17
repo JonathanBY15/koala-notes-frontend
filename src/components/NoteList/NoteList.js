@@ -1,9 +1,7 @@
-// TestingApi.js
-
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const TestingApi = () => {
+const NoteList = () => {
   const [notes, setNotes] = useState([]);
   const navigate = useNavigate();
 
@@ -15,6 +13,11 @@ const TestingApi = () => {
           throw new Error('Failed to fetch notes');
         }
         const data = await response.json();
+        
+        // Sort data based on updated_at in descending order (latest first)
+        data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
+
+        // Set the sorted notes array in state
         setNotes(data);
       } catch (error) {
         console.error('Error fetching notes:', error);
@@ -22,10 +25,17 @@ const TestingApi = () => {
     };
 
     fetchNotes();
-  }, []); // Empty dependency array means this effect runs once after the initial render
+  }, []);
 
   const handleNoteClick = (noteId) => {
     navigate(`/note/${noteId}`);
+  };
+
+  const renderContentWithLineBreaks = (content) => {
+    // Split content into lines based on '\n' and render each line in a <p> tag
+    return content.split('\n').map((line, index) => (
+      <p key={index}>{line}</p>
+    ));
   };
 
   if (notes.length === 0) {
@@ -37,13 +47,13 @@ const TestingApi = () => {
       {notes.map((note) => (
         <div key={note.id} className="note-item" onClick={() => handleNoteClick(note.id)}>
           <h3>{note.title}</h3>
-          <p>{note.content}</p>
-          <p><b>Created at:</b> {new Date(note.created_at).toLocaleString()}</p>
-          <p><b>Last Updated at:</b> {new Date(note.updated_at).toLocaleString()}</p>
+          <div className="note-content">
+            {renderContentWithLineBreaks(note.content)}
+          </div>
         </div>
       ))}
     </div>
   );
 };
 
-export default TestingApi;
+export default NoteList;

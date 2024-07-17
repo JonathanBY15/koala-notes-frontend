@@ -2,9 +2,9 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import './NoteEdit.css'; // Import CSS file for styling
+import './NoteEditForm.css'; // Import CSS file for styling
 
-const NoteEdit = () => {
+const NoteEditForm = () => {
   const { noteId } = useParams();
   const navigate = useNavigate();
   const [note, setNote] = useState(null);
@@ -86,4 +86,4 @@ const NoteEdit = () => {
   );
 };
 
-export default NoteEdit;
+export default NoteEditForm;

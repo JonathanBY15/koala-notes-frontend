@@ -3,6 +3,7 @@
     color: white;
     padding: 20px 0;
     text-align: center;
+    max-height: 100px;
 }  
 
 .footer-content {
@@ -22,4 +23,8 @@
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+.footer-container {
+    text-align: center;
 }

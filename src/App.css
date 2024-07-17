@@ -2,79 +2,36 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
 body {
   background-color: #ddd;
+  min-height: 100%;
+}
+
+html{
+  height: 100%
+}
+
+#root {
+  height: 100%;
 }
 
 .app-container {
-  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure app-container fills the viewport height */
+  
   margin: 0 auto;
-  padding: 0 20px;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px;
 }
 
 main {
   padding: 20px;
 }
 
-.note-list {
-  margin-top: 20px;
-  list-style-type: none;
+.main-content {
+  flex: 1; /* Grow to take up remaining space */
+  overflow-y: auto; /* Enable scrolling for main content if needed */
+  display: flex;
 }
 
-.note-item {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 10px;
-  transition: all 0.2s;
-}
 
-.note-item:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  cursor: pointer;
-}
 
-#delete-btn {
-  background-color: rgb(207, 66, 66);
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #f0f0f0;
-  width: 80px;
-}
-
-#delete-btn:hover {
-  cursor: pointer;
-  background-color: #656565;
-}
-
-#edit-btn {
-  background-color: rgb(66, 153, 207);
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  color: #f0f0f0;
-  width: 80px;
-}
-
-#edit-btn:hover {
-  cursor: pointer;
-  background-color: #656565;
-}

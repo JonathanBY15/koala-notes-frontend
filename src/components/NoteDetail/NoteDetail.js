@@ -1,9 +1,7 @@
-// Note.js
-
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
-const Note = () => {
+const NoteDetail = () => {
     const { noteId } = useParams();
     const navigate = useNavigate();
     const [note, setNote] = useState(null);
@@ -45,7 +43,14 @@ const Note = () => {
 
     const handleEditClick = () => {
         navigate(`/note/${noteId}/edit`);
-      };
+    };
+
+    const renderContentWithLineBreaks = (content) => {
+        // Split content into lines based on '\n' and render each line in a <p> tag
+        return content.split('\n').map((line, index) => (
+            <p key={index}>{line}</p>
+        ));
+    };
 
     if (loading) {
         return <p>Loading...</p>;
@@ -58,7 +63,9 @@ const Note = () => {
     return (
         <div>
             <h2>{note.title}</h2>
-            <p>{note.content}</p>
+            <div className="note-content">
+                {renderContentWithLineBreaks(note.content)}
+            </div>
             <p>Created at: {new Date(note.created_at).toLocaleString()}</p>
             <p>Updated at: {new Date(note.updated_at).toLocaleString()}</p>
             <button id="delete-btn" onClick={handleDeleteClick}>Delete</button>
@@ -67,4 +74,4 @@ const Note = () => {
     );
 };
 
-export default Note;
+export default NoteDetail;

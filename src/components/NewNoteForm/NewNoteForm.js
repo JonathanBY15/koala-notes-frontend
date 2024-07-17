@@ -1,11 +1,11 @@
-// NoteForm.js
+// NewNoteForm.js
 
-import './NoteForm.css'
+import './NewNoteForm.css'
 
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
 
-const NoteForm = ({ onSubmit, initialTitle = '', initialContent = '' }) => {
+const NewNoteForm = ({ onSubmit, initialTitle = '', initialContent = '' }) => {
     const [title, setTitle] = useState(initialTitle);
     const [content, setContent] = useState(initialContent);
     const navigate = useNavigate(); // Initialize useNavigate hook
@@ -62,4 +62,4 @@ const NoteForm = ({ onSubmit, initialTitle = '', initialContent = '' }) => {
     );
 };
 
-export default NoteForm;
+export default NewNoteForm;

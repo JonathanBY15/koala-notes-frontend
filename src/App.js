@@ -3,30 +3,34 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 
-import Navbar from './components/navbar/Navbar';
-import NoteForm from './components/note_form/NoteForm';
-import Footer from './components/footer/Footer';
-import Home from './pages/home/Home'
-import Note from './components/note_detail/Note'
-import NoteEdit from './components/note_edit/NoteEdit';
+import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
+import HomePage from './pages/HomePage/HomePage'
+import EditNotePage from './pages/EditNotePage/EditNotePage';
+import NoteDetailPage from './pages/NoteDetailPage/NoteDetailPage';
+import NewNotePage from './pages/NewNotePage/NewNotePage';
+
 
 function App() {
 
   return (
     <Router>
       <div className="app-container">
+
         <header>
           <Navbar />
         </header>
-        <main>
+
+        <main className="main-content">
           <Routes>
-            <Route path='/' element={<Home/>} />
-            <Route path='/note/:noteId' element={<Note/>} />
-            <Route path='/note/:noteId/edit' element={<NoteEdit/>} />
-            <Route path="/new" element={<NoteForm/>}/>
+            <Route path='/' element={<HomePage/>} />
+            <Route path='/note/:noteId' element={<NoteDetailPage/>} />
+            <Route path='/note/:noteId/edit' element={<EditNotePage/>} />
+            <Route path="/new" element={<NewNotePage/>}/>
           </Routes>
         </main>
-        <footer>
+
+        <footer className="footer-container">
           <Footer />
         </footer>
       </div>

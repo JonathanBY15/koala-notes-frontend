@@ -1,0 +1,7 @@
+.edit-note-page {
+    flex: 1; /* Grow to take up remaining space */
+    overflow-y: auto; /* Enable scrolling for main content if needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
