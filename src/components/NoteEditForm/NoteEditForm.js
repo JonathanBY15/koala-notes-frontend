@@ -81,7 +81,7 @@ const NoteEditForm = () => {
         required
       ></textarea>
 
-      <button onClick={handleSave}>Save Changes</button>
+      <button className="submit-btn" onClick={handleSave}>Save Changes</button>
     </div>
   );
 };

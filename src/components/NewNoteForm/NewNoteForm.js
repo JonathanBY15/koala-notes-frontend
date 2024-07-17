@@ -39,6 +39,7 @@ const NewNoteForm = ({ onSubmit, initialTitle = '', initialContent = '' }) => {
 
     return (
         <form onSubmit={handleSubmit} className="note-form">
+            <h2>New Note</h2>
             <label htmlFor="title">Title:</label>
             <input
                 type="text"
@@ -57,7 +58,7 @@ const NewNoteForm = ({ onSubmit, initialTitle = '', initialContent = '' }) => {
                 required
             ></textarea>
 
-            <button type="submit">Save Note</button>
+            <button className="submit-btn" type="submit">Save Note</button>
         </form>
     );
 };
