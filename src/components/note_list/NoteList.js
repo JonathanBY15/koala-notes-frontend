@@ -15,7 +15,7 @@ const TestingApi = () => {
           throw new Error('Failed to fetch notes');
         }
         const data = await response.json();
-        setNotes(data); // Assuming data is an array of notes objects
+        setNotes(data);
       } catch (error) {
         console.error('Error fetching notes:', error);
       }

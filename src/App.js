@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import './App.css';
 
-import Navbar from './Navbar';
-import NoteForm from './NoteForm';
-import Footer from './Footer';
-import Home from './Home'
-import Note from './Note'
-import NoteEdit from './NoteEdit';
+import Navbar from './components/navbar/Navbar';
+import NoteForm from './components/note_form/NoteForm';
+import Footer from './components/footer/Footer';
+import Home from './pages/home/Home'
+import Note from './components/note_detail/Note'
+import NoteEdit from './components/note_edit/NoteEdit';
 
 function App() {
 

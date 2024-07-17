@@ -1,7 +1,7 @@
 // Home.js
 
 import React from 'react';
-import TestingApi from './TestingApi';
+import TestingApi from '../../components/note_list/NoteList';
 
 const Home = () => {
     return (

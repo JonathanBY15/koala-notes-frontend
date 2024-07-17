@@ -4,7 +4,7 @@ import './Navbar.css'
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from './images/logo-white.png';
+import logo from '../../images/logo-white.png';
 
 const Navbar = () => {
     const navigate = useNavigate();
