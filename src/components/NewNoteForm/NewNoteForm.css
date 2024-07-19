@@ -1,14 +1,12 @@
-/* NoteForm.css */
-
 .note-form {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .note-form label {
   display: block;
   margin-bottom: 10px;
@@ -41,4 +39,3 @@
 .note-form button:hover {
   background-color: #555;
 }
-

@@ -1,8 +1,6 @@
 .home {
   flex: 1;
-  /* Grow to take up remaining space */
   overflow-y: auto;
-  /* Enable scrolling for main content if needed */
   display: flex;
   justify-content: center;
   width: 100%;
@@ -24,7 +22,6 @@
 }
 
 .note-item:hover {
-  /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
   box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
   cursor: pointer;
 }

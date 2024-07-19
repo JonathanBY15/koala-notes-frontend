@@ -1,15 +1,14 @@
-// NewNoteForm.js
-
 import './NewNoteForm.css'
 
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import { useNavigate } from 'react-router-dom';
 
 const NewNoteForm = ({ onSubmit, initialTitle = '', initialContent = '' }) => {
     const [title, setTitle] = useState(initialTitle);
     const [content, setContent] = useState(initialContent);
-    const navigate = useNavigate(); // Initialize useNavigate hook
+    const navigate = useNavigate();
 
+    // function to handle form submission, send post request to add new note
     const handleSubmit = async (e) => {
         e.preventDefault();
 

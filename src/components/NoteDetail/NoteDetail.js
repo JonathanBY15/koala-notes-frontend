@@ -27,6 +27,7 @@ const NoteDetail = () => {
         fetchNote();
     }, [noteId]);
 
+    // Function to handle delete button click, send delete request to delete note
     const handleDeleteClick = async () => {
         try {
             // const response = await fetch(`http://localhost:8000/api/notes/${noteId}`, {
@@ -43,10 +44,12 @@ const NoteDetail = () => {
         }
     };
 
+    // Function to handle edit button click, navigate to the edit note page
     const handleEditClick = () => {
         navigate(`/note/${noteId}/edit`);
     };
 
+    // Function to render content with line breaks
     const renderContentWithLineBreaks = (content) => {
         // Split content into lines based on '\n' and render each line in a <p> tag
         return content.split('\n').map((line, index) => (

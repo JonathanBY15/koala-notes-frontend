@@ -1,8 +1,7 @@
 .new-note-page {
-    flex: 1; /* Grow to take up remaining space */
-    overflow-y: auto; /* Enable scrolling for main content if needed */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

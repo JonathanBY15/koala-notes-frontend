@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import './NoteEditForm.css'; // Import CSS file for styling
+import './NoteEditForm.css';
 
 const NoteEditForm = () => {
   const { noteId } = useParams();
@@ -34,6 +34,7 @@ const NoteEditForm = () => {
     fetchNote();
   }, [noteId]);
 
+  // Function to handle form submission, send put request to update note with new title and content
   const handleSave = async () => {
     try {
       // const response = await fetch(`http://localhost:8000/api/notes/${noteId}`, {
@@ -47,7 +48,7 @@ const NoteEditForm = () => {
       if (!response.ok) {
         throw new Error('Failed to update note');
       }
-      // Optionally handle success, e.g., show a success message
+      // Redirect to the note detail page after successful update
       navigate(`/note/${noteId}`);
     } catch (error) {
       console.error('Error updating note:', error);

@@ -19,8 +19,6 @@ html {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* Ensure app-container fills the viewport height */
-
   margin: 0 auto;
 }
 
@@ -30,9 +28,7 @@ main {
 
 .main-content {
   flex: 1;
-  /* Grow to take up remaining space */
   overflow-y: auto;
-  /* Enable scrolling for main content if needed */
   display: flex;
   justify-content: center;
 }
