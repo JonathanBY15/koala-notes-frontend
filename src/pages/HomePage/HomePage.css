@@ -1,9 +1,12 @@
 .home {
-  flex: 1; /* Grow to take up remaining space */
-  overflow-y: auto; /* Enable scrolling for main content if needed */
+  flex: 1;
+  /* Grow to take up remaining space */
+  overflow-y: auto;
+  /* Enable scrolling for main content if needed */
   display: flex;
   justify-content: center;
   width: 100%;
+  max-width: 800px;
 }
 
 .note-list {
