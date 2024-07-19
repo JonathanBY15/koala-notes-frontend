@@ -8,12 +8,13 @@ const NoteList = () => {
   useEffect(() => {
     const fetchNotes = async () => {
       try {
-        const response = await fetch('http://localhost:8000/api/notes');
+        // const response = await fetch('http://localhost:8000/api/notes');
+        const response = await fetch('http://18.222.134.45/api/notes');
         if (!response.ok) {
           throw new Error('Failed to fetch notes');
         }
         const data = await response.json();
-        
+
         // Sort data based on updated_at in descending order (latest first)
         data.sort((a, b) => new Date(b.updated_at) - new Date(a.updated_at));
 

@@ -10,7 +10,8 @@ const NoteDetail = () => {
     useEffect(() => {
         const fetchNote = async () => {
             try {
-                const response = await fetch(`http://localhost:8000/api/notes/${noteId}`);
+                // const response = await fetch(`http://localhost:8000/api/notes/${noteId}`);
+                const response = await fetch(`http://18.222.134.45/api/notes/${noteId}`);
                 if (!response.ok) {
                     throw new Error('Failed to fetch note');
                 }
@@ -28,7 +29,8 @@ const NoteDetail = () => {
 
     const handleDeleteClick = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/api/notes/${noteId}`, {
+            // const response = await fetch(`http://localhost:8000/api/notes/${noteId}`, {
+            const response = await fetch(`http://18.222.134.45/api/notes/${noteId}`, {
                 method: 'DELETE'
             });
             if (!response.ok) {

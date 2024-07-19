@@ -14,7 +14,8 @@ const NewNoteForm = ({ onSubmit, initialTitle = '', initialContent = '' }) => {
         e.preventDefault();
 
         try {
-            const response = await fetch('http://localhost:8000/api/notes', {
+            // const response = await fetch('http://localhost:8000/api/notes', {
+            const response = await fetch('http://18.222.134.45/api/notes', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
